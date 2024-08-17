@@ -1,0 +1,37 @@
+$primary: black;
+$btn: #d01c28;
+$gray: #5a5959;
+
+$extraLight: 200;
+$light: 300;
+$normal: normal;
+$medium: 500;
+$semibold: 600;
+$bold: bold;
+
+$fullShadow: 0px 0px 20px rgba($primary, 0.16);
+
+// Mixins
+$baseSize: 16;
+
+@function size($target, $context: $baseSize) {
+  @return calc($target / $context) * 1em;
+}
+
+@mixin max($max) {
+  @media only screen and (max-width: #{$max}px) {
+    @content;
+  }
+}
+
+@mixin min($min) {
+  @media only screen and (min-width: #{$min}px) {
+    @content;
+  }
+}
+
+@mixin maxOrientation($max, $orientation) {
+  @media only screen and (max-device-width: #{$max}px) and (orientation: #{$orientation}) {
+    @content;
+  }
+}

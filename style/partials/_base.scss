@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    touch-action: manipulation;
+    width: 100%;
+    -ms-scroll-chaining: none;
+    user-select: none;
+    // color: $white;
+    // background-color: $black;
+  }
+  
+  .container {
+    &--fluid {
+      width: 100%;
+      padding: 0 4%;
+    }
+  
+    &--responsive {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+  .right {
+    margin: 0 auto;
+  }
+  // input {
+  //   border: none;
+  //   border-bottom: 1px solid $headeing;
+  //   margin-top: 35px;
+  //   line-height: 1.7;
+  //   width: 100%;
+  // }
+  
+  .bg {
+    &--white {
+      background-color: white;
+    }
+   
+  }
+
+  
+  li {
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+  @for $i from 0 through 20 {
+    // Padding Overall
+    .pd {
+      &--#{$i * 5} {
+        padding: #{$i * 5}px;
+      }
+    }
+  
+    // Padding Directional
+    .pt {
+      &--#{$i * 5} {
+        padding-top: #{$i * 5}px;
+      }
+    }
+  
+    .pr {
+      &--#{$i * 5} {
+        padding-right: #{$i * 5}px;
+      }
+    }
+  
+    .pb {
+      &--#{$i * 5} {
+        padding-bottom: #{$i * 5}px;
+      }
+    }
+  
+    .pl {
+      &--#{$i * 5} {
+        padding-left: #{$i * 5}px;
+      }
+    }
+  
+    // Margin Overall
+    .md {
+      &--#{$i * 5} {
+        margin: #{$i * 5}px;
+      }
+    }
+  
+    // Margin Directional
+    .mt {
+      &--#{$i * 5} {
+        margin-top: #{$i * 5}px;
+      }
+    }
+  
+    .mr {
+      &--#{$i * 5} {
+        margin-right: #{$i * 5}px;
+      }
+    }
+  
+    .mb {
+      &--#{$i * 5} {
+        margin-bottom: #{$i * 5}px;
+      }
+    }
+  
+    .ml {
+      &--#{$i * 5} {
+        margin-left: #{$i * 5}px;
+      }
+    }
+  }
+  
+  @for $i from 1 through 80 {
+    .fs {
+      &--#{$i} {
+        font-size: size($i);
+      }
+    }
+  }
+  
+  .width {
+    &--column {
+      &-one {
+        width: 100%;
+      }
+    }
+    &--max {
+      width: max-content;
+    }
+  }
+  
+  @for $i from 0 through 20 {
+    .width {
+      &--column {
+        &-two {
+          &-#{$i * 5} {
+            width: calc(100% / 2 - #{$i * 5}px);
+          }
+        }
+  
+        &-three {
+          &-#{$i * 5} {
+            width: calc(100% / 3 - #{$i * 5}px);
+          }
+        }
+  
+        &-four {
+          &-#{$i * 5} {
+            width: calc(100% / 4 - #{$i * 5}px);
+          }
+        }
+  
+        &-five {
+          &-#{$i * 5} {
+            width: calc(100% / 5 - #{$i * 5}px);
+          }
+        }
+        &-six {
+          &-#{$i * 5} {
+            width: calc(100% / 6 - #{$i * 5}px);
+          }
+        }
+      }
+    }
+  }
+  li{
+    list-style: none;
+  }
+  
+  .btn{
+    padding: 10px 20px;
+    border: none;
+    &--login-btn{
+      background-color: $btn;
+      color: white;
+    }
+  }
+  
+  
