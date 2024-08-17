@@ -2,9 +2,11 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
+import useCheckMobileScreen from "./hooks/useCheckMobileScreeen";
 
 export default function Header() {
   const [navBar, setNavbar] = useState(false);
+  const { isMobile, isIpad } = useCheckMobileScreen();
 
   const handleShowNavbar = () => {
     setNavbar(!navBar);
@@ -24,15 +26,22 @@ export default function Header() {
         <div className="menu-icon" onClick={handleShowNavbar}>
           <CiMenuFries />
         </div>
-        <div className={`nav-elemnts ${navBar && "active"}`}>
-          <ul className="flex">
+        <div className={`nav-elements ${navBar ? "active" : ""}`}>
+          <ul className={`flex ${isMobile ? "flex--direction-column " : ""} nav-item`}>
             <li className="nav-list">HOME</li>
             <li className="nav-list">LOCATION</li>
             <li className="nav-list">ABOUT</li>
             <li className="nav-list">CONTACT</li>
+            <li>
+              <button className="btn btn--login-btn" id="login-mob">
+                LOGIN
+              </button>
+            </li>
           </ul>
         </div>
-        <button className="btn btn--login-btn">LOGIN</button>
+        <button className="btn btn--login-btn" id="login">
+          LOGIN
+        </button>
       </nav>
     </section>
   );
