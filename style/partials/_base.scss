@@ -37,14 +37,28 @@
   //   line-height: 1.7;
   //   width: 100%;
   // }
-  
+  .font{
+    &--normal{
+      font-weight: $normal;
+    }
+    &--bold{
+      font-weight: $bold;
+    }
+    &--bolder{
+font-weight: $bold;
+    }
+  }
   .bg {
     &--white {
       background-color: white;
     }
    
   }
-
+.color{
+  &--gray{
+    color: $gray;
+  }
+}
   
   li {
     list-style: none;
@@ -188,4 +202,9 @@
     }
   }
   
-  
+.break{
+  white-space: pre-line;
+}
+.heading{
+  font-size: 7em;
+}
